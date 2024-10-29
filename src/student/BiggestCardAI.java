@@ -1,4 +1,4 @@
 package student;
 
-public class BiggestCardAI {
+public class BiggestCardAI extends AI{
 }

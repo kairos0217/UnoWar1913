@@ -77,11 +77,19 @@ public class Card {
 
     /**
      * Overrides default toString method
-     * @return [rank] + [suit] representation of card
+     * @return [rank] of [suit] representation of card
      */
     @Override
     public String toString() {
-        return this.getRankName() + " + " + this.getSuitName();
+        return this.getRankName() + " of " + this.getSuitName();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof Card
+                && ((Card) obj).getRankNum() == this.getRankNum()
+                && ((Card) obj).getSuitName().equals(this.getSuitName());
+
     }
 
 
