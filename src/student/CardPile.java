@@ -2,11 +2,18 @@ package student;
 
 public class CardPile {
 
+    /**
+     * Size of Pile.
+     */
     private int size;
+
+    /**
+     * Card on top of Pile.
+     */
     private Card topCard;
 
     /**
-     * Initalize new card pile with given topCard
+     * Initalize new card pile with given topCard.
      * Size of pile is 1
      * @param topCard to start off pile
      */
@@ -16,7 +23,7 @@ public class CardPile {
     }
 
     /**
-     * @return if card is playable
+     * @return if card is playable.
      */
     public boolean canPlay(Card card) {
         return card != null
@@ -25,7 +32,7 @@ public class CardPile {
     }
 
     /**
-     * Plays the current card if possible
+     * Plays the current card if possible.
      * Otherwise prints error message
      * @param card to play
      */
@@ -39,14 +46,14 @@ public class CardPile {
     }
 
     /**
-     * @return number of cards in pile
+     * @return number of cards in pile.
      */
     public int getNumCards() {
         return size;
     }
 
     /**
-     * @return topCard on pile
+     * @return topCard on pile.
      */
     public Card getTopCard() {
         return topCard;

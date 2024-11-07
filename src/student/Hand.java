@@ -2,12 +2,23 @@ package student;
 
 public class Hand {
 
+    /**
+     * Array of cards that is the hand.
+     */
     private Card[] hand;
+
+    /**
+     * Deck to draw from.
+     */
     private Deck deck;
+
+    /**
+     * Size of hand.
+     */
     private int count;
 
     /**
-     * Creates a hand of Cards
+     * Creates a hand of Cards.
      * @param deck to draw from
      * @param size of hand to initalize
      */
@@ -21,13 +32,14 @@ public class Hand {
     }
 
     /**
-     * @return Size of hand
+     * @return Size of hand.
      */
     public int getSize(){
         return count;
     }
 
     /**
+     * Gets card from index in hand.
      * @param  i card to get
      * @return Card at [i]
      * otherwise [0] if index invalid
@@ -41,7 +53,7 @@ public class Hand {
     }
 
     /**
-     * Removes card from deck and draws new card after
+     * Removes card from deck and draws new card after.
      * @param card to remove from deck
      * @return whether card removed or not
      */

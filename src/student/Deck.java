@@ -4,11 +4,18 @@ import java.util.Random;
 
 public class Deck {
 
+    /**
+     * Index of card to be drawn next.
+     */
     private int cur;
+
+    /**
+     * Array of Cards that is the deck.
+     */
     private Card[] deck;
 
     /**
-     * Creates new Deck with 52 cards
+     * Creates new Deck with 52 cards.
      */
     public Deck() {
         deck = new Card[52];
@@ -22,13 +29,13 @@ public class Deck {
     }
 
     /**
-     * Shuffles the deck using Fisher-Yates algorithm
+     * Shuffles the deck using Fisher-Yates algorithm.
      * Sets cur index to 51 (top of deck)
      */
     public void shuffle(){
         Random rn = new Random();
         for (int i = deck.length-1; i > 0; i--) {
-            int j = rn.nextInt(i+1);
+            int j = rn.nextInt(i + 1);
             Card temp = deck[i];
             deck[i] = deck[j];
             deck[j] = temp;
@@ -37,13 +44,13 @@ public class Deck {
     }
 
     /**
-     * Draws next card from shuffled stack
+     * Draws next card from shuffled stack.
      * Updates cur index
      * Reshuffles if deck all used
      * @return Card at index cur
      */
     public Card draw() {
-        if (cur == -1) {
+        if (isEmpty()) {
             this.shuffle();
         }
         cur -= 1;
@@ -51,14 +58,14 @@ public class Deck {
     }
 
     /**
-     * @return number of cards not yet dealt
+     * @return number of cards not yet dealt.
      */
     public int cardsRemaining() {
         return this.cur + 1;
     }
 
     /**
-     * @return whether all cards dealt or not
+     * @return whether all cards dealt or not.
      */
     public boolean isEmpty() {
         return cur < 0;

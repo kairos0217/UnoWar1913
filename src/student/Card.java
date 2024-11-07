@@ -1,7 +1,15 @@
 package student;
 
 public class Card {
+
+    /**
+     * Rank of card (1-13).
+     */
     private final int rank;
+
+    /**
+     * Suit of card (1-4)
+     */
     private final int suit;
 
     /**
